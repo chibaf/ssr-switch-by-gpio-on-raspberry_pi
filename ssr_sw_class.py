@@ -20,6 +20,7 @@ class ssr_sw:
           print("find go"+self.pin_id+".txt\n")
         else:
           print("stop this proram")
+          return
 #	    f=open("ssr_"+gid+"_log.txt",'a',encoding="utf-8")
 #	    t_delta = datetime.timedelta(hours=9)
 #	    JST = datetime.timezone(t_delta, 'JST')

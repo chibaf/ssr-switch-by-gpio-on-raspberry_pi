@@ -32,11 +32,11 @@ class ssr_sw:
           exit()
         GPIO.output(self.ssr_pin, 1)
         print("SSR "+self.pin_id+" ON ("+str(ton)+"sec)\n")
-        time.sleep(ton)
+        time.sleep(int(ton))
         if tstop != 0.0:
           GPIO.output(self.ssr_pin, 0)
           print("SSR "+self.pin_id+" OFF ("+str(tstop)+"sec)\n")
-          time.sleep(tstop)
+          time.sleep(int(tstop))
       except KeyboardInterrupt:
         print("stop this proram")
 #        f=open("ssr"+gid+"_log.txt",'a',encoding="utf-8")

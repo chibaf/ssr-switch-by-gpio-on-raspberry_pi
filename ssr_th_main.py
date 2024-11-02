@@ -7,13 +7,6 @@ import datetime
 from time import sleep
 import os
 
-#ledpin = 12				# PWM pin connected to LED
-#GPIO.setwarnings(False)			#disable warnings
-#GPIO.setmode(GPIO.BOARD)		#set pin numbering system
-#GPIO.setup(ledpin,GPIO.OUT)
-#pi_pwm = GPIO.PWM(ledpin,1000)		#create PWM instance with frequency
-#pi_pwm.start(0)				#start PWM of required Duty Cycle 
-
 pin_id=str(sys.argv[1])
 #print("pin_id:"+pin_id)
 path = './go'+pin_id+'.txt'

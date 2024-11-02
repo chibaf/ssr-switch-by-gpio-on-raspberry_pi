@@ -3,5 +3,5 @@ def ssr(pin,ton,tstop,q):
   ssr=ssr_sw(int(pin))
   ssr.run(ton,tstop)
   data="stop"
-  q.put(data)
+  q.put(0)
   return

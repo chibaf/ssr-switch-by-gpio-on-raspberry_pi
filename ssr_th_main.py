@@ -23,14 +23,14 @@ while True:
   try:
     if threading.active_count()==1:
       data = q.get()
-      print("thread returns "+data)
+      print("thread returns "+str(data))
       i=i+1
-      if int(data)>=0:
-        pi_pwm.ChangeDutyCycle(100)
-        print("SSR ON")
-      else:
-        pi_pwm.ChangeDutyCycle(0)
-        print("SSR OFF")
+#      if int(data)>=0:
+#        pi_pwm.ChangeDutyCycle(100)
+#        print("SSR ON")
+#      else:
+#        pi_pwm.ChangeDutyCycle(0)
+#        print("SSR OFF")
       th = threading.Thread(target=ssr, args=(sys.argv[1],sys.argv[2],sys.argv[3],q),daemon=True)
       th.start()
       print("start thread: "+str(i))

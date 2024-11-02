@@ -26,6 +26,7 @@ th.start()
 print("start thread: "+str(i))
 #th.join()
 while True:
+  try:
     is_file = os.path.isfile(path)
     print(threading.active_count())
     if threading.active_count()==1:
@@ -44,6 +45,7 @@ while True:
       print(is_file)
       print("nop2")
       continue
-#    print("Keyboard Interrupt")
-#    GPIO.cleanup()
-#    exit()
+  except KeyboardInterrupt:
+     print("Keyboard Interrupt")
+     GPIO.cleanup()
+     exit()

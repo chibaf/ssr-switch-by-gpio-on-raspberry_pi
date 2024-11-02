@@ -10,3 +10,15 @@ ssr_main8.py -> ssr_sw_class.py
 ## 2
 
 ssr_th_main.py -> ssr_sw_th.py -> ssr_sw_class.py
+
+## 3 usage
+
+start: python3 ssr_th_main.py 8 2 2
+
+where the first 8 is pin number, the second 2 is "on time", the last 8 is "off time"
+
+touch 8go.txt: make ssr contorl active
+
+rm 8go.txt: make ssr contorl inactive
+
+control-C stop this program

@@ -11,7 +11,7 @@ ssr_main8.py -> ssr_sw_class.py
 
 ssr_th_main.py -> ssr_sw_th.py -> ssr_sw_class.py
 
-## 3 usage
+## ssr_th_main.py usage
 
 start: python3 ssr_th_main.py 8 2 2
 

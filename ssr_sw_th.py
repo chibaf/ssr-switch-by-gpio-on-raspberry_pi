@@ -1,7 +1,6 @@
 def ssr(pin,ton,tstop,q):
   from ssr_sw_class import ssr_sw
   ssr=ssr_sw(int(pin))
-  ssr.run(ton,tstop)
-  data="stop"
-  q.put(0)
+  ret=ssr.run(ton,tstop)
+#  q.put(ret)
   return

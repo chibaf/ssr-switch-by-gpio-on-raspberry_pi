@@ -12,15 +12,15 @@ class ssr_sw:
     import RPi.GPIO as GPIO
     import os
     import time
-    path = './go'+self.pin_id+'.txt'
-    while True:
-      try:
-        is_file = os.path.isfile(path)
-        if is_file:
-          print("find go"+self.pin_id+".txt\n")
-        else:
-          print("stop this proram")
-          return
+#    path = './go'+self.pin_id+'.txt'
+#    while True:
+#      try:
+#        is_file = os.path.isfile(path)
+#        if is_file:
+#          print("find go"+self.pin_id+".txt\n")
+#        else:
+#          print("stop this proram")
+#          return
 #	    f=open("ssr_"+gid+"_log.txt",'a',encoding="utf-8")
 #	    t_delta = datetime.timedelta(hours=9)
 #	    JST = datetime.timezone(t_delta, 'JST')
@@ -29,17 +29,17 @@ class ssr_sw:
 #	    s1=d+": ssr_"+gid+" "+str(ont)+" "+str(offt)+" stops\n"
 #	    f.write(s1)
 #	    f.close()
-          GPIO.output(self.ssr_pin, 0)
-          exit()
-        GPIO.output(self.ssr_pin, 1)
-        print("SSR "+self.pin_id+" ON ("+str(ton)+"sec)\n")
-        time.sleep(int(ton))
-        if tstop != 0.0:
-          GPIO.output(self.ssr_pin, 0)
-          print("SSR "+self.pin_id+" OFF ("+str(tstop)+"sec)\n")
-          time.sleep(int(tstop))
-      except KeyboardInterrupt:
-        print("stop this proram")
+#          GPIO.output(self.ssr_pin, 0)
+#          exit()
+    GPIO.output(self.ssr_pin, 1)
+    print("SSR "+self.pin_id+" ON ("+str(ton)+"sec)\n")
+    time.sleep(int(ton))
+    GPIO.output(self.ssr_pin, 0)
+    print("SSR "+self.pin_id+" OFF ("+str(tstop)+"sec)\n")
+    time.sleep(int(tstop))
+#
+#      except KeyboardInterrupt:
+#        print("stop this proram")
 #        f=open("ssr"+gid+"_log.txt",'a',encoding="utf-8")
 #        t_delta = datetime.timedelta(hours=9)
 #        JST = datetime.timezone(t_delta, 'JST')
@@ -48,6 +48,5 @@ class ssr_sw:
 #        s1=d+": ssr_"+gid+" "+str(ont)+" "+str(offt)+" stops\n"
 #        f.write(s1)
 #        f.close()
-        GPIO.output(self.ssr_pin, False)
-        exit()
-        
+#        GPIO.output(self.ssr_pin, False)
+    return 

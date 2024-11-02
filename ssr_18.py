@@ -9,6 +9,7 @@ ont=float(sys.argv[1])
 offt=float(sys.argv[2])
 
 ssr_pin=18
+print(ssr_pin)
 gid=str(ssr_pin)
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)

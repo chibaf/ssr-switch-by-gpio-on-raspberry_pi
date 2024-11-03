@@ -9,12 +9,15 @@ from time import sleep
 i=1
 q1 =queue.Queue()  # queue which stores a result of a thread
 q2 =queue.Queue()  # queue which stores a result of a thread
-th1 = threading.Thread(target=ssr,args=(8,3,3,q1),name="t1",daemon=True)
-th2 = threading.Thread(target=ssr,args=(18,2,2,q2),name="t2",daemon=True)
+th1 = threading.Thread(target=ssr,args=(8,3,3,q1),name="th1",daemon=True)
+th2 = threading.Thread(target=ssr,args=(18,2,2,q2),name="th2",daemon=True)
 th1.start()
+th1.join()
 th2.start()
-#print("start thread: "+str(i))
-#th.join()
+th2.join()
+print(th1.name)
+print(th2.name)
+
 while True:
   try:
     if threading.active_count()==1:

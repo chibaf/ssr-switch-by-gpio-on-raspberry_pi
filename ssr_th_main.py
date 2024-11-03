@@ -20,7 +20,6 @@ th.start()
 while True:
   try:
     is_file = os.path.isfile(path)
-#    print(threading.active_count())
     if threading.active_count()==1:
 #      print(is_file)
       if is_file:
@@ -30,12 +29,8 @@ while True:
         th.start()
         print("start thread: "+str(i))
       else:
-#        print("nop")
         continue
     else:
-#      print(threading.active_count())
-#      print(is_file)
-#      print("nop2")
       continue
   except KeyboardInterrupt:
      print("Keyboard Interrupt")

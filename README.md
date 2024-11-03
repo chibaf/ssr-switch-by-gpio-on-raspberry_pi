@@ -33,12 +33,11 @@ import threading<br>
 <br>
 def test():<br>
     print("test")
-</pre>
-<pre>                                                              
 thread = threading.Thread(target=test, name="test_thread")<br>
 t.start()                              # Thread name<br>
 t.join()<br>
 print(t.name) # Here<br>
+<br>
 You can get the thread name test_thread as shown below:<br>
 <br>
 test<br>

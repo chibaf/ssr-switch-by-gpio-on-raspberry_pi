@@ -1,4 +1,4 @@
-# ssr-switch-by-gpio-on-raspberry_py
+    # ssr-switch-by-gpio-on-raspberry_py
 ssr switch by gpio on raspberry_py
 
 ![20210821150402](https://github.com/user-attachments/assets/641a7cab-0a96-4d4b-83ef-745ea7f69533)
@@ -29,9 +29,6 @@ control-C stop this program
 pi@RasPi4B32BIT:~ $ python3 thname.py <br>
 test<br>
 test_thread<br>
-</pre>
-
-<pre>
 import threading<br>
 <br>
 def test():<br>

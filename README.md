@@ -35,8 +35,9 @@ test_thread<br>
 import threading<br>
 <br>
 def test():<br>
-    print("test")<br>
-<br>                                                              
+    print("test")
+</pre>
+<pre>                                                              
 thread = threading.Thread(target=test, name="test_thread")<br>
 t.start()                              # Thread name<br>
 t.join()<br>

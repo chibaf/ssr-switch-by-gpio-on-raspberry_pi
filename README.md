@@ -22,3 +22,11 @@ touch 8go.txt: make ssr contorl active
 rm 8go.txt: make ssr contorl inactive
 
 control-C stop this program
+
+## check thread name
+
+<pre>
+pi@RasPi4B32BIT:~ $ python3 thname.py <br>
+test<br>
+test_thread<br>
+</pre>

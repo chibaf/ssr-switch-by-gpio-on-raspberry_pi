@@ -7,16 +7,19 @@ import datetime
 from time import sleep
 import os
 
-#j1=1
 pin_id1=str(8)
 path1='./go'+pin_id1+'.txt'
-#j2=1
 pin_id2=str(18)
 path2='./go'+pin_id2+'.txt'
+t1on=1
+t1of=2
+t2on=2
+t2of=1
+
 q1 =queue.Queue()  # queue which stores a result of a thread
 q2 =queue.Queue()  # queue which stores a result of a thread
-th1 = threading.Thread(target=ssr,args=(8,1,1,q1),name=pin_id1,daemon=True)
-th2 = threading.Thread(target=ssr,args=(18,1,1,q2),name=pin_id2,daemon=True)
+th1 = threading.Thread(target=ssr,args=(8,t1on,t1of,q1),name=pin_id1,daemon=True)
+th2 = threading.Thread(target=ssr,args=(18,t2on,t2of,q2),name=pin_id2,daemon=True)
 th1.start()
 #th1.join()
 th2.start()
@@ -34,7 +37,7 @@ while True:
      if is_file1:
        #j1=j1+1
        #print("th1:",str(j1))
-       th1 = threading.Thread(target=ssr,args=(8,1,1,q1),name=pin_id1,daemon=True)
+       th1 = threading.Thread(target=ssr,args=(8,t1on,t1of,q1),name=pin_id1,daemon=True)
        th1.start()
 #       th1.join()
        print(th1.name)
@@ -42,7 +45,7 @@ while True:
      if is_file2:
        #j2=j2+1
        #print("th2:",str(j2))
-       th2 = threading.Thread(target=ssr,args=(18,1,1,q2),name=pin_id2,daemon=True)
+       th2 = threading.Thread(target=ssr,args=(18,t2on,t2of,q2),name=pin_id2,daemon=True)
        th2.start()
 #       th2.join()
        print(th2.name)

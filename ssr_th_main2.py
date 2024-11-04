@@ -21,12 +21,9 @@ q2 =queue.Queue()  # queue which stores a result of a thread
 th1 = threading.Thread(target=ssr,args=(8,t1on,t1of,q1),name=pin_id1,daemon=True)
 th2 = threading.Thread(target=ssr,args=(18,t2on,t2of,q2),name=pin_id2,daemon=True)
 th1.start()
-#th1.join()
 th2.start()
-#th2.join()
 print(th1.name)
 print(th2.name)
-#print("1: thread started")
 
 while True:
   try:
@@ -35,19 +32,13 @@ while True:
     elif threading.active_count()<3:
      is_file1=os.path.isfile(path1)
      if is_file1:
-       #j1=j1+1
-       #print("th1:",str(j1))
        th1 = threading.Thread(target=ssr,args=(8,t1on,t1of,q1),name=pin_id1,daemon=True)
        th1.start()
-#       th1.join()
        print(th1.name)
      is_file2=os.path.isfile(path2)
      if is_file2:
-       #j2=j2+1
-       #print("th2:",str(j2))
        th2 = threading.Thread(target=ssr,args=(18,t2on,t2of,q2),name=pin_id2,daemon=True)
        th2.start()
-#       th2.join()
        print(th2.name)
   except KeyboardInterrupt:
     print("Keyboard Interrupt")

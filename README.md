@@ -7,7 +7,7 @@ ssr switch by gpio on raspberry_py
 
 ssr_main8.py -> ssr_sw_class.py
 
-## 2 threading
+## 1 threading
 
 ssr_th_main.py -> ssr_sw_th.py -> ssr_sw_class.py
 
@@ -26,3 +26,11 @@ control-C stop this program
 ## check thread name
 
 python3 thname.py
+
+## 2 threading
+
+ssr_th_main2.py -> ssr_sw_th.py -> ssr_sw_class.py
+
+## ssr_th_main2.py usage (threading)
+
+start: python3 ssr_th_main2.py

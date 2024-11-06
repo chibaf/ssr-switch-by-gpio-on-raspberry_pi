@@ -25,4 +25,4 @@ control-C stop this program
 
 ## check thread name
 
-
+python3 thname.py

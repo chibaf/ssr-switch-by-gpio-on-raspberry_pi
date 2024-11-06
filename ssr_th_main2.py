@@ -35,7 +35,8 @@ while True:
        th2.start()
        print(th2.name)
      else:
-       print("go??.txt not found")
+       continue
+#       print("go??.txt not found")
   except KeyboardInterrupt:
     print("Keyboard Interrupt")
     GPIO.cleanup()

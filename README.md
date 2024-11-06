@@ -25,21 +25,4 @@ control-C stop this program
 
 ## check thread name
 
-<pre>
-pi@RasPi4B32BIT:~ $ python3 thname.py <br>
-test<br>
-test_thread<br>
-import threading<br>
-<br>
-def test():<br>
-    print("test")
-thread = threading.Thread(target=test, name="test_thread")<br>
-t.start()                              # Thread name<br>
-t.join()<br>
-print(t.name) # Here<br>
-<br>
-You can get the thread name test_thread as shown below:<br>
-<br>
-test<br>
-test_thread # Here<br>
-</pre>
+

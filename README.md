@@ -34,3 +34,9 @@ ssr_th_main2.py -> ssr_sw_th.py -> ssr_sw_class.py
 ## ssr_th_main2.py usage (threading)
 
 start: python3 ssr_th_main2.py
+
+### References
+
+threading — Thread-based parallelism — Python 3.13.0 documentation
+
+https://docs.python.org/3/library/threading.html

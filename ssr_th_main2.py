@@ -18,13 +18,7 @@ t2of=1
 
 q1 =queue.Queue()  # queue which stores a result of a thread
 q2 =queue.Queue()  # queue which stores a result of a thread
-th1 = threading.Thread(target=ssr,args=(8,t1on,t1of,q1),name=pin_id1,daemon=True)
-th2 = threading.Thread(target=ssr,args=(18,t2on,t2of,q2),name=pin_id2,daemon=True)
-th1.start()
-th2.start()
-print(th1.name)
-print(th2.name)
-
+#
 while True:
   try:
     if threading.active_count()==3:
@@ -40,6 +34,8 @@ while True:
        th2 = threading.Thread(target=ssr,args=(18,t2on,t2of,q2),name=pin_id2,daemon=True)
        th2.start()
        print(th2.name)
+     else:
+       print("go??.txt not found")
   except KeyboardInterrupt:
     print("Keyboard Interrupt")
     GPIO.cleanup()

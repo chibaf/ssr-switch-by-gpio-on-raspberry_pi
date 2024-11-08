@@ -7,7 +7,7 @@ import datetime
 from time import sleep
 import os
 
-pin_id1=str(8)
+pin_id1=str(11)
 path1='./go'+pin_id1+'.txt'
 pin_id2=str(18)
 path2='./go'+pin_id2+'.txt'
@@ -26,7 +26,7 @@ while True:
     elif threading.active_count()<3:
      is_file1=os.path.isfile(path1)
      if is_file1:
-       th1 = threading.Thread(target=ssr,args=(8,t1on,t1of,q1),name=pin_id1,daemon=True)
+       th1 = threading.Thread(target=ssr,args=(11,t1on,t1of,q1),name=pin_id1,daemon=True)
        th1.start()
        print(th1.name)
      is_file2=os.path.isfile(path2)

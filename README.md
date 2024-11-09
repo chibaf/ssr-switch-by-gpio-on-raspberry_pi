@@ -34,6 +34,12 @@ ssr_th_main2.py -> ssr_sw_th.py -> ssr_sw_class.py
 
 start: python3 ssr_th_main2.py
 
+## GPIOs test with LEDs
+
+### 11,12,13,15,16,18 = GPIO pin No. on Raspberry Pi board
+
+python3 gpio_test.py
+
 ### References
 
 threading — Thread-based parallelism — Python 3.13.0 documentation

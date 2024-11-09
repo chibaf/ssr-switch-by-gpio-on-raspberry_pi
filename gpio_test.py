@@ -45,8 +45,6 @@ while True:
     time.sleep(0.5)
     GPIO.output(18, 0)
   except KeyboardInterrupt:
+    print("KeyboardInterrupt")
     GPIO.cleanup()
     exit()
-#
-GPIO.cleanup()
-exit()

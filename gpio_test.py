@@ -44,6 +44,7 @@ while True:
     GPIO.output(16, 0)
     time.sleep(0.5)
     GPIO.output(18, 0)
+    time.sleep(0.5)
   except KeyboardInterrupt:
     print("KeyboardInterrupt")
     GPIO.cleanup()
